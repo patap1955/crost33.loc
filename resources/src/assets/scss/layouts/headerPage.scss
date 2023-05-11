@@ -1,0 +1,126 @@
+.header__services {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-items: center;
+    justify-content: space-between;
+
+    &-logo {
+        grid-column: 2/3;
+        grid-row: 1;
+
+        @media (max-width: 1200px) {
+            grid-column: 1/2;
+        }
+    }
+
+    &-adress {
+        grid-column: 1/2;
+        grid-row: 1;
+
+        @media (max-width: 1200px) {
+            width: 268px;
+            grid-column: 2/3;
+        }
+
+        @media (max-width: 992px) {
+            display: none;
+        }
+
+        &-text {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 27px;
+            text-align: center;
+            color: #232323;
+        }
+
+        &-mode {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
+            color: #9D9D9D;
+        }
+    }
+
+    &-email {
+        @media (max-width: 480px) {
+            display: none;
+        }
+        a {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 27px;
+            text-align: center;
+            color: #232323;
+            transition: all ease .3s;
+
+            &:hover {
+                color: #FEC234;
+            }
+        }
+    }
+
+    &-phone {
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        a {
+            border: 2px solid #232323;
+            padding: 15px;
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: right;
+            text-transform: uppercase;
+            color: #232323;
+            transition: all ease .3s;
+
+            @media (max-width: 1170px) {
+                padding: 10px 15px;
+                font-size: 16px;
+            }
+
+            &:hover {
+                background: #FFFFFF;
+                border: 2px solid #FEC234;
+                color: #FEC234;
+            }
+        }
+    }
+}
+
+.navbar-services {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: 768px) {
+        display: none;
+        position: fixed;
+        z-index: 0;
+        left: 0;
+        top: 0;
+    }
+
+    &.active {
+        display: block;
+        overflow: auto;
+        padding-bottom: 30px;
+    }
+}
+
+.navbar_scrolled {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(2.5px);
+    animation-name: fadeInNavbar;
+    animation-duration: 1s;
+}

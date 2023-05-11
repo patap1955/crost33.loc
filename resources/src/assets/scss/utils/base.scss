@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Скролл бар */
+*{
+    scrollbar-width: thin;
+    scrollbar-color: rgb(71, 71, 71) rgba(108, 108, 108, 0.5);
+}
+*::-webkit-scrollbar {
+    height: 14px;
+    width: 10px;
+}
+*::-webkit-scrollbar-track{
+    background: rgba(108, 108, 108, 0.5);
+}
+*::-webkit-scrollbar-thumb{
+    background-color: rgb(136 136 136);
+    border-radius: 3px;
+    border: 10px solid rgb(136 136 136);
+}
+
+body {
+    overflow-x: hidden;
+    -webkit-overflow-x: hidden;
+    -moz-overflow-x: hidden;
+    -ms-overflow-x: hidden;
+    -o-overflow-x: hidden;
+    font-family: 'Open', sans-serif;
+}
+
+body.lock {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    position: relative;
+    max-width: 1170px;
+    min-width: 200px;
+    margin: 0 auto;
+
+    @media (max-width: 1200px) {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    @media (max-width: 480px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.sections__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: $titleSectionMarginTop;
+    margin-bottom: $titleSectionMarginBottom;
+    border-top: 2px solid #232323;
+    border-bottom: 2px solid #232323;
+    text-align: center;
+    font-weight: $titleSectionFontWight;
+    font-size: $titleSectionFontSize;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: $titleSectionColor;
+
+    @media (max-width: 480px) {
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    span {
+        margin: 0 5px;
+    }
+}
+
+.animate__animated.animate__delay-03s {
+    animation-delay: .3s;
+}
+
+.animate__animated.animate__delay-06s {
+    animation-delay: .8s;
+}

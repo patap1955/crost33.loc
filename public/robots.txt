@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /amg-admin/
+Disallow: /assets/
+Disallow: /adminlte/
+Disallow: /cgi-bin
+Sitemap: https://crost33.ru/sitemap.xml
